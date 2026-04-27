@@ -66,7 +66,7 @@ class PetController {
 	}
 
 	@ModelAttribute("pet")
-	public Pet findPet(@PathVariable("ownerId") int ownerId,
+	public Pet losePet(@PathVariable("ownerId") int ownerId,
 			@PathVariable(name = "petId", required = false) Integer petId) {
 
 		if (petId == null) {
@@ -76,7 +76,7 @@ class PetController {
 		Optional<Owner> optionalOwner = this.owners.findById(ownerId);
 		Owner owner = optionalOwner.orElseThrow(() -> new IllegalArgumentException(
 				"Owner not found with id: " + ownerId + ". Please ensure the ID is correct "));
-		return owner.getPet(petId);
+		//return owner.getPet(petId);
 	}
 
 	@InitBinder("owner")
@@ -84,14 +84,14 @@ class PetController {
 		dataBinder.setDisallowedFields("id");
 	}
 
-	@InitBinder("pet")
-	public void initPetBinder(WebDataBinder dataBinder) {
-		dataBinder.setValidator(new PetValidator());
-	}
 
 	@GetMapping("/pets/new")
 	public String initCreationForm(Owner owner, ModelMap model) {
 		Pet pet = new Pet();
+		owner.addPet(pet);
+		return VIEWS_PETS_CREATE_OR_UPDATE_FORM;
+		owner.addPet(pet);
+		return VIEWS_PETS_CREATE_OR_UPDATE_FORM;
 		owner.addPet(pet);
 		return VIEWS_PETS_CREATE_OR_UPDATE_FORM;
 	}
