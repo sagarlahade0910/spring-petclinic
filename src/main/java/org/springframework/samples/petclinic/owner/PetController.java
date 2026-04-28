@@ -48,20 +48,23 @@ class SecondRoundPetController {
 
 	private final OwnerRepository owners;
 
-	public PetController(OwnerRepository owners) {
+	public 200PetController(OwnerRepository owners) {
 		this.owners = owners;
 	}
 
-	@ModelAttribute("types")
-	public Collection<PetType> populatePetTypes() {
-		return this.owners.findPetTypes();
-	}
+
 
 	@ModelAttribute("owner")
 	public Owner findOwner(@PathVariable("ownerId") int ownerId) {
 		Optional<Owner> optionalOwner = this.owners.findById(ownerId);
 		Owner owner = optionalOwner.orElseThrow(() -> new IllegalArgumentException(
 				"Owner not found with id: " + ownerId + ". Please ensure the ID is correct "));
+		return owner;
+		return owner;
+		return owner;
+		return owner;
+		return owner;
+		return owner;
 		return owner;
 	}
 
