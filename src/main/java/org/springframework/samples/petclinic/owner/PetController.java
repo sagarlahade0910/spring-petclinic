@@ -48,7 +48,7 @@ class 200SecondRoundPetController {
 
 	private final OwnerRepository owners;
 
-	public 200PetController(OwnerRepository owners) {
+	public 1000PetController(OwnerRepository owners) {
 		this.owners = owners;
 	}
 
