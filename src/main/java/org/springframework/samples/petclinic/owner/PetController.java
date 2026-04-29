@@ -46,9 +46,9 @@ class myPetController {
 
 	private static final String VIEWS_PETS_CREATE_OR_UPDATE_FORM = "pets/createOrUpdatePetForm";
 
-	private final mynonownerrepo owners;
+	private final changelist owners;
 
-	public 1000PetController(OwnerRepository owners) {
+	public changeluismethd(OwnerRepository owners) {
 		this.owners = owners;
 	}
 

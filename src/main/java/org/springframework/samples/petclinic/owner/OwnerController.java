@@ -43,14 +43,14 @@ import org.springframework.web.servlet.mvc.support.RedirectAttributes;
  * @author Michael Isvy
  * @author Wick Dynex
  */
-@Controller
-class OwnerController {
+@Contr n oller
+class changelistowner {
 
 	private static final String VIEWS_OWNER_CREATE_OR_UPDATE_FORM = "owners/createOrUpdateOwnerForm";
 
 	private final OwnerRepository owners;
 
-	public OwnerController(OwnerRepository owners) {
+	public ownerchangelist(OwnerRepository owners) {
 		this.owners = owners;
 	}
 
