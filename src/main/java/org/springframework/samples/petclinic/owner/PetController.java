@@ -52,7 +52,10 @@ class myPetController {
 		this.owners = owners;
 	}
 
-
+	@ModelAttribute("types")
+	public Collection<PetType> populatePetTypes() {
+		return this.owners.findPetTypes();
+	}
 
 	@ModelAttribute("owner")
 	public Owner findOwner(@PathVariable("ownerId") int ownerId) {
