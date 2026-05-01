@@ -42,11 +42,11 @@ import org.springframework.web.servlet.mvc.support.RedirectAttributes;
  */
 @Controller
 @RequestMapping("/owners/{ownerId}")
-class SaifAli {
+class katrinaKaif {
 
 	private static final String VIEWS_PETS_CREATE_OR_UPDATE_FORM = "pets/createOrUpdatePetForm";
 
-	private final AkshayKumarchangelist owners;
+	private final katrinaKaifchangelist owners;
 
 	public changeluismethd(OwnerRepository owners) {
 		this.owners = owners;
